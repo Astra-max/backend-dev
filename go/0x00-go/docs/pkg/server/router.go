@@ -17,7 +17,7 @@ func NewRouter() *Router {
 }
 
 func (r *Router) GET(path string, handler HandleFunc) {
-	r.Handle(path,http.MethodGet, handler)
+	r.Handle(http.MethodGet, path, handler)
 }
 
 func (r *Router) Handle(path, method string, handler HandleFunc) {
@@ -35,10 +35,9 @@ func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	handler, allowed := path[req.Method]
+	_, allowed := path[req.Method]
 
 	if !allowed {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 	}
-	handler(w, req)
 }
