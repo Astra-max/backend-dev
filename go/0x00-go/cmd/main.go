@@ -1,15 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "github.com/Astra-max/backend-dev/go/0x00-go/pkg/server"
 )
 
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "hello there")
+	server.Run()
 }
