@@ -7,5 +7,6 @@ import (
 
 func ApiRoutes(r *server.Router) {
 	r.GET("/", handlers.AuthUser)
-	//r.GET("/health", handlers.Health)
+	r.POST("/", handlers.AuthUser)
+	r.GET("/health", handlers.Health)
 }
