@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 	"encoding/json"
 	"github.com/Astra-max/backend-dev/go/0x00-go/pkg/server"
@@ -15,11 +15,10 @@ func AuthUser(w http.ResponseWriter, req *http.Request) {
 	server.Json(w, 200, data)
 	err := json.NewDecoder(req.Body).Decode(&user)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 	newDb := new(models.DataBase)
 	newDb.DB = append(newDb.DB, user)
-	fmt.Println(newDb.DB)
 
 	defer req.Body.Close()
 }

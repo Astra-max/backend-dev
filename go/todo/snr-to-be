@@ -1,0 +1,109 @@
+# BEYOND SYNTAX
+
+  -- Go garbage collector
+  -- Stacks and heap
+  -- Goroutines scheduling(GMP model)
+
+# CONCURRENCY & PARALLELISM
+
+   -- Goroutine lifecycle
+   -- Buffered and unbuffered channels
+   -- Channels internals
+   -- Select 
+   -- Graceful shutdown with context
+
+# HTTP, APIS & WEB SERVICES
+  
+  -- Http server internals
+  -- Middleware chaining
+  -- Request context propagation
+  -- Timeout everything
+  -- API pagination
+  -- gRPC Vs REST
+  -- Idempotency
+
+
+# DATABASE & DATA LAYER
+
+  -- Database/sql internals
+  -- Connection pooling
+  -- Transactions & isolation levels
+
+# ARCHITECTURE & SYS DESIGNS
+ 
+ -- Hexagonal arch
+ -- Dependency Inversion
+ -- Package boundaries
+
+# MICROSERVICES & DISTRIBUTED SYS
+
+  -- Service discovery ((recovery))
+  -- Load balancing
+  -- Circuit breakers
+  -- Distributed tracing
+
+# PERFORMANCE ENGINEERING
+
+ -- CPU profiling
+ -- Heap profiling
+ -- Block & mutex profiling
+     (go tool pprof)
+ -- Event driven arch
+
+       HIGH THROUGHPUT SYS
+       ------------------
+          -- Zero allocation techniques
+          -- Object pooling
+          -- Avoid reflections
+
+# LOGGING & METRICS & TRACING
+  
+  -- Structured logging
+  -- Prometheus metrics
+  -- OpenTelemetry tracing
+
+    FAULT TOLERANCE
+    ---------------
+     
+     -- Graceful shutdown
+     -- Chaos testing
+     -- Retry strategies
+     -- Backoff algorithms
+
+   
+
+# SECURITY
+------------
+
+  -- Tls in go
+  -- JWT and Oauth
+  -- SQL injection prevention
+  -- Secrets management
+  
+
+    PROJECTS
+   ----------
+     i. Build secure auth sys with refresh token
+
+# TESTING
+----------
+
+   1. Advanced Testing
+       -- Table testing
+       -- Fuzz testing
+       -- Integrated testing with docker
+
+# TOOLING AND DEVOPS
+  
+  -- Go modules in depth
+  -- CI/CD pipelines
+  -- Docker multi stage build
+  -- Kubernetes basics
+  -- Load testing (k6)
+
+# OPEN SOURCE & REAL-WORLD READINESS
+  
+  -- Read go stdlib source code
+  -- Contribute to go open source
+  -- Write technical blogs
+  -- Review other engineers code

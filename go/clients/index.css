@@ -1,0 +1,46 @@
+.user-data {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 92%;
+    height: 2.6rem;
+    border: 0rem;
+    border-radius: 0.4rem;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.parents {
+    width: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.password {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid silver;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.username {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid silver;
+    padding-left: 0.3rem;
+    font-size: 1rem;
+}
+
+.s-btn {
+    margin: 1rem 0rem;
+}
