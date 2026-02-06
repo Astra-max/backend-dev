@@ -43,6 +43,7 @@ func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 	if !allowed {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
 	}
 	handler(w, req)
 }
