@@ -8,3 +8,9 @@
 # DESCRIPTION
   ** Building auth sys with go backend server**
   ** Nextjs client **
+
+# TOOLS
+  **JWT**
+  **Next**
+  **Go**
+  **Postgres**
