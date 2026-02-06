@@ -2,4 +2,4 @@
 
 # AUTHOR
    Waore Maxwel
-   waoremaxwel17@gmail.com
+   waoremaxwel17@gmail.com,
