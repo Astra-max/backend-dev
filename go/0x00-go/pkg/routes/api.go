@@ -8,5 +8,6 @@ import (
 func ApiRoutes(r *server.Router) {
 	r.GET("/", handlers.AuthUser)
 	r.POST("/", handlers.AuthUser)
+	r.POST("/sign-up", handlers.SingUpUser)
 	r.GET("/health", handlers.Health)
 }

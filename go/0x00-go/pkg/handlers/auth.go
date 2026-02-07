@@ -22,3 +22,16 @@ func AuthUser(w http.ResponseWriter, req *http.Request) {
 
 	defer req.Body.Close()
 }
+
+func SingUpUser(w http.ResponseWriter, req *http.Request) {
+	data := map[string]string{"user": "welcome"}
+	server.Json(w, 200, data)
+	err := json.NewDecoder(req.Body).Decode(&user)
+	if err != nil {
+		log.Println(err)
+	}	
+	newDb := new(models.DataBase)
+	newDb.DB = append(newDb.DB, user)
+
+	defer req.Body.Close()
+}
