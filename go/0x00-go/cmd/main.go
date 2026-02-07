@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	LoadConfig()
 	r := server.NewRouter()
 	routes.ApiRoutes(r)
 	server.Run(r)
