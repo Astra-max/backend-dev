@@ -1,0 +1,29 @@
+{{define "title"}}Ascii Art Generator{{end}}
+{{define "body"}}
+<main class="page">
+  <form action="/ascii-art" method="POST" class="card">
+    <h2 class="section-title">Choose a banner</h2>
+
+    <div class="buttons">
+      <input type="radio" id="standard" name="artstyle" value="standard" checked>
+      <label for="standard">Standard</label>
+
+      <input type="radio" id="shadow" name="artstyle" value="shadow">
+      <label for="shadow">Shadow</label>
+
+      <input type="radio" id="thinkertoy" name="artstyle" value="thinkertoy">
+      <label for="thinkertoy">Thinkertoy</label>
+    </div>
+
+    <h2 class="section-title">Enter your text</h2>
+    <div class="textareagenerate">
+      <textarea name="text" placeholder="Type your text here..."></textarea>
+      <input type="submit" value="Generate" class="btn-primary">
+    </div>
+  </form>
+  <section class="asciioutput">
+    <h2 class="section-title">Output</h2>
+    <pre class="output-ascii">{{.ASCIIArtResult}}</pre>
+  </section>
+</main>
+{{end}}
