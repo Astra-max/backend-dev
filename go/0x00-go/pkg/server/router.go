@@ -5,9 +5,11 @@ import (
 )
 
 type HandleFunc func(w http.ResponseWriter, r *http.Request)
+type MiddleWare func(HandleFunc)HandleFunc
 
 type Router struct {
 	router map[string]map[string]HandleFunc
+	MiddleWares []MiddleWare
 }
 
 func NewRouter() *Router {
@@ -16,17 +18,27 @@ func NewRouter() *Router {
 	}
 }
 
-func (r *Router) GET(path string, handler HandleFunc) {
-	r.Handle(path,http.MethodGet, handler)
+func (r *Router) Use(m MiddleWare) {
+	r.MiddleWares = append(r.MiddleWares, m)
+}
+
+func (r *Router) GET(path string, handler HandleFunc, m ...MiddleWare) {
+	r.Handle(path,http.MethodGet, handler, m...)
 }
 
 func (r *Router) POST(path string, handler HandleFunc) {
 	r.Handle(path, http.MethodPost, handler)
 }
 
-func (r *Router) Handle(path, method string, handler HandleFunc) {
+func (r *Router) Handle(path, method string, handler HandleFunc, m ...MiddleWare) {
+	
 	if _, exists := r.router[path]; !exists {
 		r.router[path] = make(map[string]HandleFunc)
+	}
+	all := append(r.MiddleWares, m...)
+
+	for i:=len(all)-1; i>=0; i-- {
+		handler = all[i](handler)
 	}
 	r.router[path][method] = handler
 }
