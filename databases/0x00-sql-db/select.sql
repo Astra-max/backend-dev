@@ -21,3 +21,7 @@ SELECT * FROM user LIMIT 10;
 -- selecting column based on age number
 
 SELECT * FROM users WHERE age == 4;
+
+-- select row wher a pattern is matched
+
+SELECT email FROM users WHERE email ILIKE "%o@gmail.com"
