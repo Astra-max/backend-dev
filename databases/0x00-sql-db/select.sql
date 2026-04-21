@@ -13,3 +13,7 @@ SELECT DISTINCT first_name FROM users;
 -- selecting table columns ordering by age in descending order
 
 SELECT * FROM user ORDER BY age DESC;
+
+-- selecting a limited number of columns
+
+SELECT * FROM user LIMIT 10;
