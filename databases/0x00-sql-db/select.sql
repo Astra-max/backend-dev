@@ -17,3 +17,7 @@ SELECT * FROM user ORDER BY age DESC;
 -- selecting a limited number of columns
 
 SELECT * FROM user LIMIT 10;
+
+-- selecting column based on age number
+
+SELECT * FROM users WHERE age == 4;
