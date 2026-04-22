@@ -14,6 +14,10 @@ SELECT DISTINCT first_name FROM users;
 
 SELECT * FROM user ORDER BY age DESC;
 
+-- organizing data in ascending order
+
+SELECT age FROM users ORDER BY age ASC;
+
 -- selecting a limited number of columns
 
 SELECT * FROM user LIMIT 10;
