@@ -26,6 +26,10 @@ SELECT * FROM user LIMIT 10;
 
 SELECT * FROM users WHERE age == 4;
 
+-- selecting row in a particular range
+
+SELECT age FROM users WHERE age > 10 AND age < 20;
+
 -- select row wher a pattern is matched
 
 SELECT email FROM users WHERE email ILIKE "%o@gmail.com"
