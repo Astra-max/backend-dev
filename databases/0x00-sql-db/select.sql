@@ -34,6 +34,10 @@ SELECT age FROM users WHERE age > 10 AND age < 20;
 
 SELECT * FROM users WHERE age = 20 OR age < 40;
 
+--- selecting rows in a range with between and clause
+
+SELECT age FROM users BETWEEN 20 AND 50;
+
 -- select row wher a pattern is matched
 
 SELECT email FROM users WHERE email ILIKE "%o@gmail.com"
