@@ -21,3 +21,7 @@ SELECT SUM(age) FROM users;
 --- concatinating to a string column entry
 
 SELECT user, STRING_AGG(user, "--> user") FROM users;
+
+-- provide default value if not provided
+
+SELECT user, COALESCE(null, "not found") FROM users;
