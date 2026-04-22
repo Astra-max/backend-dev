@@ -17,3 +17,7 @@ SELECT MIN(age) FROM users;
 --- add all values in a column
 
 SELECT SUM(age) FROM users;
+
+--- concatinating to a string column entry
+
+SELECT user, STRING_AGG(user, "--> user") FROM users;
