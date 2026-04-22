@@ -13,3 +13,7 @@ SELECT AVG(age) FROM users;
 --- selecting the minimum value within a column
 
 SELECT MIN(age) FROM users;
+
+--- add all values in a column
+
+SELECT SUM(age) FROM users;
