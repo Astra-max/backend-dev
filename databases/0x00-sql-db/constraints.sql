@@ -32,3 +32,18 @@ ALTER TABLE user ADD CONSTRAINT unique_email UNIQUE (email);
 --- adding constraint via check key word
 
 ALTER TABLE users ADD CONSTRAINT gender_pkey CHECK(gender='Female' or gender = 'Male');
+
+--- connecting multiple table together via foreign key
+--- foreign key is a ref that ref a primary key in another table
+--- inorder to work the types have to be the same
+
+CREATE TABLE person(
+    id BIGSERIAL PRIMARY key,
+    name TEXT NOT NULL,
+    car_id BIGSERIAL REFERENCES UNIQUE car(id);
+);
+
+CREATE TABLE car(
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL
+)
