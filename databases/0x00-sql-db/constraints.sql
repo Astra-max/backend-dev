@@ -28,3 +28,7 @@ CREATE TABLE users(
 --- adding unique constraint via alter command
 
 ALTER TABLE user ADD CONSTRAINT unique_email UNIQUE (email);
+
+--- adding constraint via check key word
+
+ALTER TABLE users ADD CONSTRAINT gender_pkey CHECK(gender='Female' or gender = 'Male');
