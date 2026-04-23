@@ -38,12 +38,16 @@ ALTER TABLE users ADD CONSTRAINT gender_pkey CHECK(gender='Female' or gender = '
 --- inorder to work the types have to be the same
 
 CREATE TABLE person(
-    id BIGSERIAL PRIMARY key,
+    id BIGSERIAL NOT NULL PRIMARY key,
     name TEXT NOT NULL,
     car_id BIGSERIAL REFERENCES UNIQUE car(id);
 );
 
 CREATE TABLE car(
-    id BIGSERIAL PRIMARY KEY,
+    id BIGSERIAL NOT NULL PRIMARY KEY,
     name TEXT NOT NULL
 )
+
+--- UPDATING foregn key id column
+
+UPDATE person SET car_id = 1 WHERE user_id = 1;
