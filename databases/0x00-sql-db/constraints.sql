@@ -51,3 +51,14 @@ CREATE TABLE car(
 --- UPDATING foregn key id column
 
 UPDATE person SET car_id = 1 WHERE user_id = 1;
+
+
+----- deleting columns with constraints
+--- to delete a entry with constraint with delete the constraint first before the actual entry
+--- the table the it is referenced
+---- cascade remove every single row that is reference by that key
+
+---- 1. first approach you delete manually which is safe
+
+DELETE FROM user WHERE car_id = 1;
+DELETE FROM cars WHERE id = 1;
