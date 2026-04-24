@@ -62,3 +62,15 @@ UPDATE person SET car_id = 1 WHERE user_id = 1;
 
 DELETE FROM user WHERE car_id = 1;
 DELETE FROM cars WHERE id = 1;
+
+  --- 2 . cascade on delete --- clears all entries on delete
+     --- very dangerous, wipes alot of data
+     --- add this constraint on table creation
+
+CREATE TABLE users(
+    user_id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL
+    car_id SERIAL REFERENCES cars(id) ON DELETE CASCADE
+);
+
+---- this approach clears all data this key is referencing
