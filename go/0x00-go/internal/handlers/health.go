@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"github.com/Astra-max/backend-dev/go/0x00-go/pkg/server"
+	"github.com/Astra-max/backend-dev/go/0x00-go/internal/server"
 )
 
 func Health(w http.ResponseWriter, req *http.Request) {

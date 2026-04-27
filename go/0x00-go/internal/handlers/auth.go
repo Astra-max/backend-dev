@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 	"encoding/json"
-	"github.com/Astra-max/backend-dev/go/0x00-go/pkg/server"
-	"github.com/Astra-max/backend-dev/go/0x00-go/pkg/models"
+	"github.com/Astra-max/backend-dev/go/0x00-go/internal/server"
+	"github.com/Astra-max/backend-dev/go/0x00-go/internal/models"
 )
 
 var user models.UserLogins
